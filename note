@@ -1,0 +1,8 @@
+function called computerPlay that randomly returns 
+    rock paper or scissors
+
+function that plays a single round taking two paramters
+    playerSelection 
+    computerSelection
+    return a win or lose string
+    ~make input case insensitve (rock, ROck, ROCK)
