@@ -1,77 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>Rock Paper Scissors!</h1>
+</head>
+
 <body>
-<script>
-    let computerChoice = "";
-    let playerChoice = ("");
-    
-    function computerPlay(){
-        computerChoice = Math.floor(Math.random() * 3);
-        if (computerChoice == 0){
-            computerChoice = "Rock";
-            game(computerChoice);
-        } else if (computerChoice == 1){
-            computerChoice = "Paper";
-            game(computerChoice);
-        } else{
-            computerChoice = "Scissors";
-            game(computerChoice);
-        }
-        
-    }
-   
-    function game(computerChoice, playerChoice){
-        playerChoice = prompt("Enter Rock, Paper, or Scissors: ");
-        playerChoice = playerChoice.charAt(0).toUpperCase() + playerChoice.toLowerCase().slice(1);
-        console.log("=================================================================");
-        console.log("Your move: "+playerChoice);
-        console.log("Computer move: "+computerChoice);
+    <input type="button" value="ROCK"></input>
+    <input type="button" value="PAPER"></input>
+    <input type="button" value="SCISSORS"></input>
 
-        if(playerChoice == "Rock" && computerChoice == "Paper"){
-            //console.log("You lose");
-            computerScore++;
-        }else if (playerChoice == "Rock" && computerChoice == "Scissors"){
-            //console.log("You win");
-            playerScore++;
-        }else if (playerChoice == "Rock" && computerChoice == "Rock"){
-            //console.log("Tie");
-        }else if (playerChoice == "Paper" && computerChoice == "Scissors"){
-            //console.log("You lose");
-            computerScore++;
-        }else if (playerChoice == "Paper" && computerChoice == "Rock"){
-            //console.log("You win");
-            playerScore++;
-        }else if (playerChoice == "Paper" && computerChoice == "Paper"){
-            //console.log("Tie");
-        }else if (playerChoice == "Scissors" && computerChoice == "Rock"){
-            //console.log("You lose");
-            computerScore++;
-        }else if (playerChoice == "Scissors" && computerChoice == "Paper"){
-            //console.log("You win");
-            playerScore++;
-        }else if (playerChoice == "Scissors" && computerChoice == "Scissors"){
-            //console.log("Tie");
-        }
-    }
+<div id ='result'></div>        
+<script src="rps.js"></script>
 
-let playerScore = 0;
-let computerScore = 0;
-    for (let i = 1; i < 6; i++){
-        computerPlay();
-        
-        console.log("Player Score: "+playerScore);
-        console.log("Computer Score: "+computerScore);  
-    }
-    if(playerScore > computerScore){
-        console.log("Congratulations, you won!");
-    }else if (computerScore > playerScore){
-        console.log("Sorry, you lost.");
-    }else {
-        console.log("Tie game!");
-    }
-
-
-
-    
-
-
-</script>
 </body>
+</html>
